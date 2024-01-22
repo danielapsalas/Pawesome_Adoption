@@ -80,6 +80,7 @@
 
 .light-purple-button{
     background-color: #9683EC;
+    color: #FFFFFF;
 }
 
 @media (max-width: 768px) {

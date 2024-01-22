@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #f1f1f1;*/
+    background-color: #62466B!important;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 36px;
+    /*color: #555;*/
+    color: white;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+    /*color: #777;*/
+    color: white;
+}
+
+.text-container{
+    margin: 2%;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dog-image{
+    width:25%;
+    height: auto;
+    margin: 2%;
+}

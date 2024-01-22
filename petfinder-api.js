@@ -1,182 +1,178 @@
-
-
-    // Animal Type selection
-    const dropdownButton1 = document.querySelector("#filterDropdown1");
-    const dropdownMenu1 = document.querySelector("#type");
-    dropdownMenu1.addEventListener("click", function (event) {
+// Animal Type selection
+const dropdownButton1 = document.querySelector("#filterDropdown1");
+const dropdownMenu1 = document.querySelector("#type");
+dropdownMenu1.addEventListener("click", function(event) {
     const selectedValue = event.target.getAttribute("data-type");
     dropdownButton1.textContent = selectedValue + " selected";
 });
 
-    // Gender Type selection
-    const dropdownButton2 = document.querySelector("#filterDropdown2");
-    const dropdownMenu2 = document.querySelector("#gender-type");
-    dropdownMenu2.addEventListener("click", function (event) {
+// Gender Type selection
+const dropdownButton2 = document.querySelector("#filterDropdown2");
+const dropdownMenu2 = document.querySelector("#gender-type");
+dropdownMenu2.addEventListener("click", function(event) {
     const selectedValue = event.target.getAttribute("data-gender");
     dropdownButton2.textContent = selectedValue + " selected";
 });
 
-    //Age selection
-    const dropdownButton3 = document.querySelector("#filterDropdown3");
-    const dropdownMenu3 = document.querySelector("#age-type");
-    dropdownMenu3.addEventListener("click", function (event) {
+//Age selection
+const dropdownButton3 = document.querySelector("#filterDropdown3");
+const dropdownMenu3 = document.querySelector("#age-type");
+dropdownMenu3.addEventListener("click", function(event) {
     const selectedValue = event.target.getAttribute("data-age");
     dropdownButton3.textContent = selectedValue + " selected";
 });
 
 
-    const clientId = clientIDView
+const clientId = clientIDView
 
-    const secret = secretView
+const secret = secretView
 
-    petsByLocation(78245, "cat", "female", "adult");
+petsByLocation(78245, "cat", "female", "adult");
 
-    function petsByLocation(postalCode, petType, genderType, ageType) {
+function petsByLocation(postalCode, petType, genderType, ageType) {
     // Show loading GIF
     const container = document.getElementById('animalContainer');
 
     container.innerHTML = '<div class="d-flex justify-content-center text-light">\n' +
-    '  <div class="spinner-border" role="status">\n' +
-    '    <span class="visually-hidden">Loading...</span>\n' +
-    '  </div>\n' +
-    '</div>';
+        '  <div class="spinner-border text-secondary" role="status">\n' +
+        '    <span class="visually-hidden">Loading...</span>\n' +
+        '  </div>\n' +
+        '</div>';
     // container.innerHTML = '<img src="/gifs/spinner-2.gif" alt="Loading" class="loading-gif">';
     // convert to Token
     fetch(`https://api.petfinder.com/v2/oauth2/token`, {
-    method: `POST`,
-    headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
-},
-    body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${secret}`,
-})
-    .then(response => response.json())
-    .then(token => {
-    // handle the API response here
-    let apiUrl = `https://api.petfinder.com/v2/animals?location=${postalCode}`;
+        method: `POST`,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${secret}`,
+    })
+        .then(response => response.json())
+        .then(token => {
+            // handle the API response here
+            let apiUrl = `https://api.petfinder.com/v2/animals?location=${postalCode}`;
 
-    //make the url based on parameters
-    if (genderType.toLowerCase() && petType.toLowerCase() && ageType.toLowerCase()) {
-    apiUrl += `&gender=${genderType}&type=${petType}&age=${ageType}`;
-} else if (genderType.toLowerCase() && petType.toLowerCase()) {
-    apiUrl += `&gender=${genderType}&type=${petType}`;
-} else if (genderType.toLowerCase() && ageType.toLowerCase()) {
-    apiUrl += `&gender=${genderType}&age=${ageType}`;
-} else if (petType.toLowerCase() && ageType.toLowerCase()) {
-    apiUrl += `&type=${petType}&age=${ageType}`;
-} else if (genderType.toLowerCase()) {
-    apiUrl += `&gender=${genderType}`;
-} else if (petType.toLowerCase()) {
-    apiUrl += `&type=${petType}`;
-} else if (ageType.toLowerCase()) {
-    apiUrl += `&age=${ageType}`;
+            // create the URL based on parameters
+            if (genderType) {
+                apiUrl += `&gender=${genderType}`;
+            }
+            if (petType) {
+                apiUrl += `&type=${petType}`;
+            }
+            if (ageType) {
+                apiUrl += `&age=${ageType}`;
+            }
+
+            console.log(apiUrl)
+
+            //fetch data from the api
+            fetch(apiUrl, {
+                method: `GET`,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token.access_token}`
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // remove loading GIF
+                    container.innerHTML = '';
+
+                    //call the cards to display them
+                    petCards(data);
+
+                    //call the pageNums function to display page numbers
+                    // pageNums(apiUrl, data);
+
+                    console.log(data);
+                })
+                .catch(error => {
+                    // handle any errors that occurred during the request
+                    console.error(error)
+                    console.log("1" + apiUrl)
+                    window.location.href = 'error-page2.html';
+                });
+        })
+        // .catch(error => {
+        //     // handle any errors that occurred during the request
+        //     console.error(error);
+        //     console.log("2" + apiUrl)
+        //     window.location.href = '/error-page2.html';
+        // });
 }
 
-    //fetch data from the api
-    fetch(apiUrl, {
-    method: `GET`,
-    headers: {
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${token.access_token}`
-}
-})
-    .then(response => response.json())
-    .then(data => {
-    // remove loading GIF
-    container.innerHTML = '';
 
-    //call the cards to display them
-    petCards(data);
+// get user input from a search form
+const petSearch = document.getElementById('petSearch');
+const searchInput = document.getElementById('search-bar');
+const animalType = document.getElementById('type');
+const genderType = document.getElementById('gender-type');
+const ageType = document.getElementById('age-type');
 
-    //call the pageNums function to display page numbers
-    // pageNums(apiUrl, data);
-
-    console.log(data);
-})
-    .catch(error => {
-    // handle any errors that occurred during the request
-    console.error(error)
-    window.location.href = 'error-page2.html';
-});
-})
-    .catch(error => {
-    // handle any errors that occurred during the request
-    console.error(error);
-    window.location.href = '/error-page2.html';
-});
-}
-
-
-    // get user input from a search form
-    const petSearch = document.getElementById('petSearch');
-    const searchInput = document.getElementById('search-bar');
-    const animalType = document.getElementById('type');
-    const genderType = document.getElementById('gender-type');
-    const ageType = document.getElementById('age-type');
-
-    //event listener for animal type
-    animalType.addEventListener('click', e => {
+//event listener for animal type
+animalType.addEventListener('click', e => {
     e.preventDefault();
 
     let animalPicked = e.target;
     while (animalPicked && !animalPicked.classList.contains('dropdown-item')) {
-    animalPicked = animalPicked.parentElement;
-}
+        animalPicked = animalPicked.parentElement;
+    }
 
     if (animalPicked) {
-    // const animalType = animalPicked.dataset.type;
+        // const animalType = animalPicked.dataset.type;
 
-    animalType.querySelectorAll('.dropdown-item').forEach(option => {
-    option.classList.remove('active');
+        animalType.querySelectorAll('.dropdown-item').forEach(option => {
+            option.classList.remove('active');
+        });
+
+        animalPicked.classList.add('active');
+
+        console.log(animalPicked.dataset.type);
+    }
 });
 
-    animalPicked.classList.add('active');
-
-    console.log(animalPicked.dataset.type);
-}
-});
-
-    //event listener for gender type
-    genderType.addEventListener('click', e => {
+//event listener for gender type
+genderType.addEventListener('click', e => {
     e.preventDefault();
 
     let genderPicked = e.target;
     while (genderPicked && !genderPicked.classList.contains('dropdown-item')) {
-    genderPicked = genderPicked.parentElement;
-}
+        genderPicked = genderPicked.parentElement;
+    }
 
     if (genderPicked) {
-    genderType.querySelectorAll('.dropdown-item').forEach(option => {
-    option.classList.remove('active');
+        genderType.querySelectorAll('.dropdown-item').forEach(option => {
+            option.classList.remove('active');
+        });
+
+        genderPicked.classList.add('active');
+
+        console.log(genderPicked.dataset.gender);
+    }
 });
 
-    genderPicked.classList.add('active');
-
-    console.log(genderPicked.dataset.gender);
-}
-});
-
-    //event listener for age type
-    ageType.addEventListener('click', e => {
+//event listener for age type
+ageType.addEventListener('click', e => {
     e.preventDefault();
 
     let agePicked = e.target;
     while (agePicked && !agePicked.classList.contains('dropdown-item')) {
-    agePicked = agePicked.parentElement;
-}
+        agePicked = agePicked.parentElement;
+    }
 
     if (agePicked) {
-    ageType.querySelectorAll('.dropdown-item').forEach(option => {
-    option.classList.remove('active');
+        ageType.querySelectorAll('.dropdown-item').forEach(option => {
+            option.classList.remove('active');
+        });
+
+        agePicked.classList.add('active');
+
+        console.log(agePicked.dataset.age);
+    }
 });
 
-    agePicked.classList.add('active');
-
-    console.log(agePicked.dataset.age);
-}
-});
-
-    //event listener for pet search
-    petSearch.addEventListener('submit', e => {
+//event listener for pet search
+petSearch.addEventListener('submit', e => {
     e.preventDefault();
 
     const postalCode = searchInput.value;
@@ -186,130 +182,130 @@
 
     const petTypeElement = document.querySelector('#type .dropdown-item.active');
     if (petTypeElement) {
-    petType = petTypeElement.getAttribute('data-type');
-}
+        petType = petTypeElement.getAttribute('data-type');
+    }
 
     const genderTypeElement = document.querySelector('#gender-type .dropdown-item.active');
     if (genderTypeElement) {
-    genderType = genderTypeElement.getAttribute('data-gender');
-}
+        genderType = genderTypeElement.getAttribute('data-gender');
+    }
 
     const ageTypeElement = document.querySelector('#age-type .dropdown-item.active');
     if (ageTypeElement) {
-    ageType = ageTypeElement.getAttribute('data-age');
-}
+        ageType = ageTypeElement.getAttribute('data-age');
+    }
 
 
     petsByLocation(postalCode, petType, genderType, ageType);
 });
 
 
-    //displaying animals
-    function petCards(data) {
+//displaying animals
+function petCards(data) {
     const container = document.getElementById('animalContainer');
     container.innerHTML = '';
 
 
     if (!data || typeof data !== 'object' || Object.keys(data).length === 0) {
-    const noResults = document.createElement('p');
-    noResults.textContent = 'No animals found.';
-    container.appendChild(noResults);
-    return;
-}
+        const noResults = document.createElement('p');
+        noResults.textContent = 'No animals found.';
+        container.appendChild(noResults);
+        return;
+    }
 
     // Extract the array of animals from the JSON data
     const animals = data.animals;
 
     // make sure its an array and the length
     if (!Array.isArray(animals) || animals.length === 0) {
-    const noResults = document.createElement('p');
-    noResults.textContent = 'No animals found.';
-    container.appendChild(noResults);
-    return;
-}
+        const noResults = document.createElement('p');
+        noResults.textContent = 'No animals found.';
+        container.appendChild(noResults);
+        return;
+    }
 
     //make pet cards (for each) animal and append them to the container
     animals.forEach(animal => {
-    const card = document.createElement('div');
-    card.classList.add('card', 'mx-auto', 'my-4', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-3', 'col-xl-3', 'col-xxl-screens', 'hvr-grow', 'bg-boxshadow', 'bg-petcards', 'font-roboto');
-    card.style.width = '20rem';
+        const card = document.createElement('div');
+        card.classList.add('card', 'mx-auto', 'my-4', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-3', 'col-xl-3', 'col-xxl-screens', 'hvr-grow', 'bg-boxshadow', 'bg-petcards', 'font-roboto');
+        card.style.width = '20rem';
 
-    const image = document.createElement('img');
-    image.classList.add('card-img-top', 'mt-3', 'd-flex', 'justify-content-center', 'align-items-center', 'mx-auto', 'object-fit-cover');
-    image.style.width = '295px';
-    image.style.height = '295px';
-    image.src = animal.photos.length > 0 ? animal.photos[0].large : '/img/img_not_found_wide.jpg';
-    image.alt = 'Animal Image';
+        const image = document.createElement('img');
+        image.classList.add('card-img-top', 'mt-3', 'd-flex', 'justify-content-center', 'align-items-center', 'mx-auto', 'object-fit-cover');
+        image.style.width = '295px';
+        image.style.height = '295px';
+        image.src = animal.photos.length > 0 ? animal.photos[0].large : '/img/img_not_found_wide.png';
+        image.alt = 'Animal Image';
 
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
 
-    const title = document.createElement('h5');
-    title.classList.add('card-title');
-    title.textContent = animal.name ? animal.name : 'Unknown';
+        const title = document.createElement('h5');
+        title.classList.add('card-title');
+        title.textContent = animal.name ? animal.name : 'Unknown';
 
-    const description = document.createElement('p');
-    description.classList.add('card-text');
+        const description = document.createElement('p');
+        description.classList.add('card-text');
 
-    const ul = document.createElement('ul');
-    ul.classList.add('list-group', 'list-group-flush');
+        const ul = document.createElement('ul');
+        ul.classList.add('list-group', 'list-group-flush');
 
-    const id = document.createElement('li');
-    id.classList.add('list-group-item');
-    id.textContent = `Id: ${animal.id ? animal.id : 'Unknown'}`;
+        const id = document.createElement('li');
+        id.classList.add('list-group-item');
+        id.textContent = `Id: ${animal.id ? animal.id : 'Unknown'}`;
 
-    const species = document.createElement('li');
-    species.classList.add('list-group-item');
-    species.textContent = `Species: ${animal.species ? animal.species : 'Unknown'}`;
+        const species = document.createElement('li');
+        species.classList.add('list-group-item');
+        species.textContent = `Species: ${animal.species ? animal.species : 'Unknown'}`;
 
-    const breed = document.createElement('li');
-    breed.classList.add('list-group-item');
-    breed.textContent = `Breed: ${animal.breeds.primary ? animal.primary : 'Unknown'}`;
+        const breed = document.createElement('li');
+        breed.classList.add('list-group-item');
+        breed.textContent = `Breed: ${animal.breeds.primary ? animal.primary : 'Unknown'}`;
 
-    const gender = document.createElement('li');
-    gender.classList.add('list-group-item');
-    gender.textContent = `Gender: ${animal.gender ? animal.gender : 'Unknown'}`;
+        const gender = document.createElement('li');
+        gender.classList.add('list-group-item');
+        gender.textContent = `Gender: ${animal.gender ? animal.gender : 'Unknown'}`;
 
-    const age = document.createElement('li');
-    age.classList.add('list-group-item');
-    age.textContent = `Age: ${animal.age ? animal.age : 'Unknown'}`;
+        const age = document.createElement('li');
+        age.classList.add('list-group-item');
+        age.textContent = `Age: ${animal.age ? animal.age : 'Unknown'}`;
 
-    const size = document.createElement('li');
-    size.classList.add('list-group-item');
-    size.textContent = `Size: ${animal.size ? animal.size : 'Unknown'}`;
+        const size = document.createElement('li');
+        size.classList.add('list-group-item');
+        size.textContent = `Size: ${animal.size ? animal.size : 'Unknown'}`;
 
-    ul.appendChild(id);
-    ul.appendChild(species);
-    ul.appendChild(breed);
-    ul.appendChild(gender);
-    ul.appendChild(age);
-    ul.appendChild(size);
+        ul.appendChild(id);
+        ul.appendChild(species);
+        ul.appendChild(breed);
+        ul.appendChild(gender);
+        ul.appendChild(age);
+        ul.appendChild(size);
 
-    description.appendChild(ul);
+        description.appendChild(ul);
 
-    const button = document.createElement('button');
-    button.classList.add('btn', 'btn-default', 'hvr-pulse-shrink');
-    button.textContent = 'View Details';
-    button.setAttribute('data-bs-toggle', 'modal');
-    button.setAttribute('data-bs-target', '#myModal');
+        const button = document.createElement('button');
+        button.classList.add('btn', 'btn-default', 'hvr-pulse-shrink','btn', 'btn-default', 'light-purple-button');
+        button.textContent = 'View Details';
+        button.setAttribute('data-bs-toggle', 'modal');
+        button.setAttribute('data-bs-target', '#myModal');
 
-    button.addEventListener('click', () => {
-    showModal(animal);
-});
+        button.addEventListener('click', () => {
+            showModal(animal);
+        });
 
-    cardBody.appendChild(title);
-    cardBody.appendChild(description);
-    cardBody.appendChild(button);
+        cardBody.appendChild(title);
+        cardBody.appendChild(description);
+        cardBody.appendChild(button);
 
-    card.appendChild(image);
-    card.appendChild(cardBody);
+        card.appendChild(image);
+        card.appendChild(cardBody);
 
-    container.appendChild(card);
-});
+        container.appendChild(card);
+    });
 }
 
-    // Display Modal
-    function showModal(animal) {
+// Display Modal
+function showModal(animal) {
     const modalTitle = document.getElementById('modalTitle');
     const modalImage = document.getElementById('modalImage');
     const modalDescription = document.getElementById('modalDescription');
@@ -324,7 +320,7 @@
     title.textContent = animal.name ? animal.name : 'Unknown'
 
     const ul = document.createElement('ul');
-    ul.classList.add('list-group', 'list-group-flush' , 'font-roboto');
+    ul.classList.add('list-group', 'list-group-flush', 'font-roboto');
 
     const id = document.createElement('li');
 
@@ -380,11 +376,11 @@
     email.textContent = `Email: ${animal.contact.email !== null ? animal.size : 'Unknown'}`;
 
     const address = document.createElement('li');
-    address.classList.add('list-group-item' , 'font-roboto');
+    address.classList.add('list-group-item', 'font-roboto');
     address.textContent = `Address: ${animal.contact.address.address1} ${animal.contact.address.city}, ${animal.contact.address.state} ${animal.contact.address.postcode} ${animal.contact.address.country}`;
 
     const url = document.createElement('li');
-    url.classList.add('list-group-item' , 'font-roboto');
+    url.classList.add('list-group-item', 'font-roboto');
     const anchor = document.createElement('a');
     anchor.href = animal.url;
     anchor.textContent = 'More Information';
@@ -425,14 +421,14 @@
     myModal.show();
 
     // hide the background and allow scrolling
-    myModal._element.addEventListener('hidden.bs.modal', function () {
-    const modalBackdrop = document.querySelector('.modal-backdrop');
-    if (modalBackdrop) {
-    modalBackdrop.remove();
-}
-    document.body.classList.remove('modal-open');
-    document.body.style.overflow = 'auto'; // restore scrolling
-});
+    myModal._element.addEventListener('hidden.bs.modal', function() {
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+        if (modalBackdrop) {
+            modalBackdrop.remove();
+        }
+        document.body.classList.remove('modal-open');
+        document.body.style.overflow = 'auto'; // restore scrolling
+    });
 
 }
     //function for pageNums
