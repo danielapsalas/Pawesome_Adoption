@@ -1,8 +1,14 @@
 // Animal Type selection
+// get button and menu elements
 const dropdownButton1 = document.querySelector("#filterDropdown1");
 const dropdownMenu1 = document.querySelector("#type");
+
+// listen for clicks on the menu
 dropdownMenu1.addEventListener("click", function(event) {
+    // get selected value from data-type attribute of the clicked element
     const selectedValue = event.target.getAttribute("data-type");
+
+    // update button text with the selected value
     dropdownButton1.textContent = selectedValue + " selected";
 });
 
@@ -30,7 +36,7 @@ const secret = secretView
 petsByLocation(78245, "cat", "female", "adult");
 
 function petsByLocation(postalCode, petType, genderType, ageType) {
-    // Show loading GIF
+    // show loading GIF
     const container = document.getElementById('animalContainer');
 
     container.innerHTML = '<div class="d-flex justify-content-center text-light">\n' +
@@ -227,8 +233,9 @@ function petCards(data) {
     //make pet cards (for each) animal and append them to the container
     animals.forEach(animal => {
         const card = document.createElement('div');
-        card.classList.add('card', 'mx-auto', 'my-4', 'col-12', 'col-sm-6', 'col-md-4', 'col-lg-3', 'col-xl-3', 'col-xxl-screens', 'hvr-grow', 'bg-boxshadow', 'bg-petcards', 'font-roboto');
+        card.classList.add('card', 'mx-auto', 'm-4', 'col-12', 'col-md-6', 'col-lg-6', 'col-xl-6', 'col-xxl-4', 'hvr-grow', 'bg-boxshadow', 'bg-petcards', 'font-roboto');
         card.style.width = '20rem';
+        card.style.margin = '';
 
         const image = document.createElement('img');
         image.classList.add('card-img-top', 'mt-3', 'd-flex', 'justify-content-center', 'align-items-center', 'mx-auto', 'object-fit-cover');
@@ -260,7 +267,7 @@ function petCards(data) {
 
         const breed = document.createElement('li');
         breed.classList.add('list-group-item');
-        breed.textContent = `Breed: ${animal.breeds.primary ? animal.primary : 'Unknown'}`;
+        breed.textContent = `Breed: ${animal.breeds.primary !== null ? animal.breeds.primary : 'Unknown'}`;
 
         const gender = document.createElement('li');
         gender.classList.add('list-group-item');
@@ -373,7 +380,7 @@ function showModal(animal) {
 
     const email = document.createElement('li');
     email.classList.add('list-group-item');
-    email.textContent = `Email: ${animal.contact.email !== null ? animal.size : 'Unknown'}`;
+    email.textContent = `Email: ${animal.contact.email !== null ? animal.contact.email: 'Unknown'}`;
 
     const address = document.createElement('li');
     address.classList.add('list-group-item', 'font-roboto');

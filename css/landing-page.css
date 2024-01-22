@@ -83,10 +83,35 @@
     color: #FFFFFF;
 }
 
+.row {
+    --bs-gutter-x: 0!important;
+}
+
+div .small-input {
+    width: 70%!important;
+}
+
+.input-group>.form-control {
+    flex: none;
+}
+
+/*got rid of the bottom margin*/
+.no-footer-margin p{
+    margin-bottom: 0!important;
+}
+
+footer{
+   height: 50px;
+}
+
 @media (max-width: 768px) {
     .grid-container{
         height: 50vh;
     }
+}
+
+@media (min-width: 768px) {
+
 }
 
 @media (min-width: 572px) and (max-width: 767px) {
