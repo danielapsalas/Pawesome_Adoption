@@ -40,7 +40,7 @@ function petsByLocation(postalCode, petType, genderType, ageType) {
     const container = document.getElementById('animalContainer');
 
     container.innerHTML = '<div class="d-flex justify-content-center text-light">\n' +
-        '  <div class="spinner-border text-secondary" role="status">\n' +
+        '  <div class="spinner-border text-secondary mt-4" role="status">\n' +
         '    <span class="visually-hidden">Loading...</span>\n' +
         '  </div>\n' +
         '</div>';

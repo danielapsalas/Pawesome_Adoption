@@ -2,6 +2,9 @@
     font-size: 16px;
 }
 
+body{
+    background-color: #F1F2F6;
+}
 /*used for centering containers*/
 .centering-container{
     display: flex;
@@ -65,14 +68,26 @@
     padding: 2%;
     max-width: 90%;
     position: relative;
+    z-index: 1;
 }
 
 .grid-img {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.grid-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 134, 0, 0.24) !important;
+    z-index: 1;
+}
 /*navbar*/
 .bg-purple{
     background-color: #5D16A6!important;
@@ -103,6 +118,7 @@ div .small-input {
 footer{
    height: 50px;
 }
+
 
 @media (max-width: 768px) {
     .grid-container{
