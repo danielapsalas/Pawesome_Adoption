@@ -1,0 +1,96 @@
+*{
+    font-size: 16px;
+}
+
+/*used for centering containers*/
+.centering-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*used for centering text*/
+.centering-text{
+    text-align: center;
+}
+
+/*made a collage using grid for the hero part*/
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 1%;
+    height: 80vh;
+}
+
+.item{
+    width: 100%;
+    height: auto;
+}
+
+.item-1{
+    grid-row: 1/4;
+    grid-column: 1/5;
+    /*background-color: #62466b;*/
+}
+
+.item-2{
+    grid-row: 1/5;
+    grid-column: 5/9;
+    /*background-color: orange;*/
+}
+
+.item-3{
+    grid-row: 4/9;
+    grid-column: 1/5;
+    /*background-color: green;*/
+}
+
+.item-4{
+    grid-row: 5/9;
+    grid-column: 5/9;
+    /*background-color: blue;*/
+}
+
+.item-5{
+    grid-row: 2/7;
+    grid-column: 3/7;
+}
+
+.grid-text-overlap{
+    background-color: rgba(58, 57, 57, 0.87);
+    border-radius: 5%;
+    color: white;
+    box-sizing: border-box;
+    padding: 2%;
+    max-width: 90%;
+    position: relative;
+}
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*navbar*/
+.bg-purple{
+    background-color: #5D16A6!important;
+}
+
+.light-purple-button{
+    background-color: #9683EC;
+}
+
+@media (max-width: 768px) {
+    .grid-container{
+        height: 50vh;
+    }
+}
+
+@media (min-width: 572px) and (max-width: 767px) {
+    /*hiding the mobile version of the hero*/
+    .hide-md-screen {
+        display: none!important;
+    }
+}

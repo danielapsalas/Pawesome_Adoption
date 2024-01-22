@@ -1,10 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="icon" href="../img/icons/pawesome-logo-2.png" type="image/x-icon">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- hover css -->
+    <link href="../css/hover.css" rel="stylesheet">
+    <!--  Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- css styling -->
+    <link href="../css/all-pages.css" rel="stylesheet">
+    <link href="../css/pet-api.css" rel="stylesheet">
 </head>
+<title>Landing Page</title>
 <body>
-$END$
+
+<div class="container-fluid vh-100">
+    <div class="row vh-100 align-items-center justify-content-center">
+        <div class="col-md-6 col-12"> <!-- Update the column class here -->
+            <div class="p-3">
+                <h2 class="animate__backInLeft display-4 mb-3 font-roboto">Welcome to Pawesome Adoption!</h2>
+                <p class="animate__backInLeft lead font-roboto">Where you can find pets in need of homes and be a part of an online community where you can share heartwarming adoption/pet stories.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-12"> <!-- Update the column class here -->
+            <div class="carousel-overlay bg-boxshadow">
+                <div id="carouselExampleInterval" class="carousel slide mb-5" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="/img/dogGlasses.jpg" class="d-block w-100 bg-boxshadow" alt="A dog wearing glasses">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="/img/walkingDogs.jpg" class="d-block w-100 bg-boxshadow" alt="A group of dogs on a walk">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="/img/groupOfDogs.jpg" class="d-block w-100 bg-boxshadow" alt="A group of dogs looking at a treat">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex align-items-center vh-100">
+    <div class="container-purple ml-lg-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 text-center">
+                <div class="p-3">
+                    <h2 class="display-4 mb-3 font-roboto">Adopt a Pet</h2>
+                    <p class="font-roboto">
+                        Find your perfect furry companion with our user-friendly platform powered by the Petfinder API.
+                        Search pets in your area and discover playful pups, cuddly kittens, and gentle senior companions.<br>
+                        Start your search today!
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <h1>hello</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="/img/dog-polaroid.png" class="w-75 m-sm-5" alt="Image 1">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex align-items-center vh-100">
+    <div class="container-purple ml-lg-5">
+        <div class="row">
+            <div class="col-md-6 d-none d-md-flex justify-content-center">
+                <img src="/img/polaroid-dog.png" class="w-100" alt="Image 1">
+            </div>
+            <div class="col-md-6 col-12 text-center">
+                <div class="p-3 mx-auto">
+                    <h2 class="display-4 mb-3 mt-5 font-roboto">Adoption Stories</h2>
+                    <p class="font-roboto">
+                        Share the incredible journey of pet adoption with our community. Whether you've recently adopted or have heartwarming stories,
+                        this is the perfect platform to connect. Join us to engage with others, leave comments, and celebrate the power of adoption.<br>
+                        Inspire others to embark on life-changing journeys!
+                    </p>
+                    <div class="d-flex justify-content-center">
+<!--                        <a class="btn btn-default m-2" th:href="@{/login}" role="button">Login</a>-->
+<!--                        <a class="btn btn-default m-2" th:href="@{/sign-up}" role="button">Register</a>-->
+                        <h1>blah nlah</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center d-md-none">
+                <img src="/img/polaroid-dog.png" class="w-100" alt="Image 1">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex align-items-center vh-100">
+    <div class="container-purple ml-lg-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-12 text-center">
+                <div class="p-3">
+                    <h2 class="display-4 mb-3 font-roboto">Meet the team</h2>
+                    <p class="font-roboto">
+                        Want to meet the faces behind Pawesome Adoptions? Click the link below for an introduction.
+                    </p>
+                    <div class="d-flex justify-content-center">
+<!--                        <a class="btn btn-default m-2" th:href="@{/about}" role="button">About us</a>-->
+                        <h1>hey</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="../img/cat-polaroid.png" class="w-100 my-3" alt="Image 1">
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div th:replace="partials/footer :: footer"></div>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
