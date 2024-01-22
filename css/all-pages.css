@@ -1,0 +1,87 @@
+.light-beige-bg {
+    background-color: #efeae1 !important;
+}
+
+.bg-boxshadow{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(45, 45, 45, 0.50);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(45, 45, 45, 0.25);
+    box-shadow: 10px 10px 5px 0px rgba(45, 45, 45, 0.50);
+    border-radius: 10px;
+}
+
+.navbar{
+    background-color: #efeae1 !important;
+}
+
+.navbar-logo{
+    width: 60px; /* Adjust the width as needed */
+    height: 54px; /* Adjust the height as needed */
+}
+
+/*Hover.css color change*/
+.hvr-underline-from-left:before{
+    background-color: #62466b!important; /* Change the background color on hover */
+}
+
+.font-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-roboto-serif{
+    font-family: 'Roboto Serif', serif;
+}
+
+p {
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.shadow-drop-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.icon-small{
+    width: 30px;
+    height: 30px;
+}
+
+footer{
+    background-color: #efeae1 !important;
+}
+
+.about-us-bg{
+    background-color: #babbd2;
+    border: 1rem;
+    border-radius: 10px;
+}
+
+.btn-default{
+    background-color: #62466b;
+    color: #FFF;
+    font-family: Roboto, sans-serif;
+}
+
+.btn-default:hover{
+    background-color: #62466b;
+    color: #FFF;
+    border: 1px solid #efeae1;
+    font-family: "Roboto", sans-serif;
+}
+
+.create-btn{
+    background-color: #babbd2;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.create-btn:hover{
+    background-color: #62466b;
+    color: #efeae1;
+    border: 1px solid #efeae1;
+}
+
+.profile-icon{
+    width: 30px;
+    height: 30px;
+}

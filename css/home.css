@@ -1,0 +1,30 @@
+body{
+    background-image: url("../img/adoption-stories.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+    /*carousel image in landing page/home*/
+    .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container-purple{
+        background-color: #9ea2c2;
+        margin: 15%;
+        border-radius: 10px;
+        -webkit-box-shadow: 10px 10px 62px 1px rgba(110,108,110,1);
+        -moz-box-shadow: 10px 10px 62px 1px rgba(110,108,110,1);
+        box-shadow: 10px 10px 62px 1px rgba(110,108,110,1);
+    }
+
+    .about-us-margin{
+        padding: 2%;
+    }
+
+    .card {
+        max-width: 20rem;
+    }
+
