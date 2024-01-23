@@ -120,7 +120,37 @@ footer{
 }
 
 .carousel-size{
-    width: 20rem;
+    border-radius: 1%;
+    padding: 1%;
+    margin: 2%;
+    width: 30rem;
+}
+
+/*.bg-light-purple{*/
+/*    background-image: url("../img/icons/half-circle.png");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+
+.bg-light-purple{
+    background-color: #AEB8FE;
+}
+
+.bg-greywhite{
+    background-color: #F1F2F6;
+}
+
+.bg-greywhite-rounded{
+    background-color: #F1F2F6;
+    border-radius: 5%;
+}
+
+.carousel-text-box{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 768px) {

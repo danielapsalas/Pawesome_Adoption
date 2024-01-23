@@ -43,8 +43,8 @@
 
 
     <!--FOR SMALL SCREENS-->
-    <article class="intro row justify-content-center align-items-center mx-2">
-        <div class="col-md-4 centering-text d-md-none m-4">
+    <article class="intro row justify-content-center align-items-center">
+        <div class="col-md-4 centering-text d-md-none m-5">
             <h1>Welcome to PawesomeAdoptions</h1>
 <!--            <h2>Where your new furry friend awaits.</h2>-->
             <p>Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
@@ -59,124 +59,125 @@
     </article>
 
     <!--FOR LARGE SCREENS-->
-    <article class="intro row justify-content-center align-items-center d-none d-sm-block hide-md-screen mx-5">
+    <article class="intro row justify-content-center align-items-center d-none d-sm-block hide-md-screen">
         <div class="grid-container">
             <div class="item item-1 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-laying.jpg" alt="A cat laying down and looking up"></div>
             <div class="item item-2 grid-img"><img class="grid-img" src="../img/grid-imgs/terriers.jpg" alt="A terrier dog looking at the camera"></div>
             <div class="item item-3 grid-img"><img class="grid-img" src="../img/grid-imgs/pug.jpg" alt="A pug smiling and looking up at a camera"></div>
             <div class="item item-4 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-staring.jpg" alt="A cat looking at a camera"></div>
             <div class="grid-content item-5 centering-container">
-                <div class="grid-text-overlap centering-text">
-                    <h1 class="m-1">Welcome to PawesomeAdoptions</h1>
+                <div class="grid-text-overlap centering-text m-5">
+                    <h1 class="m-2">Welcome to PawesomeAdoptions</h1>
 <!--                    <h2 class="m-1">Where your new furry friend awaits.</h2>-->
-                    <p class="m-1">Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
-                    <button class="btn btn-default light-purple-button">Change a Life</button>
+                    <p class="m-2">Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
+                    <button class="btn btn-default light-purple-button m-3">Change a Life</button>
                 </div>
             </div>
         </div>
     </article>
 
+    <div class="d-none">
+        <div class="container centering-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form id="petSearch" class="mx-auto mt-3">
+                        <h3 class="centering-text">Filter your search.</h3>
+                        <div class="d-sm-flex justify-content-center mt-1">
+                            <div class="dropdown-container">
+                                <div class="dropdown me-1 ms-1">
+                                    <button class="btn btn-default dropdown-toggle light-purple-button" type="button"
+                                            id="filterDropdown1"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        Animal Type
+                                    </button>
+                                    <ul class="dropdown-menu bg-petcards" aria-labelledby="Animal Type" id="type">
+                                        <li><a class="dropdown-item" href="#" data-type="Dog">Dog</a></li>
+                                        <li><a class="dropdown-item" href="#" data-type="Cat">Cat</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dropdown-container ">
+                                <div class="dropdown me-1 ms-1">
+                                    <button class="btn btn-default dropdown-toggle light-purple-button" type="button"
+                                            id="filterDropdown2"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        Gender
+                                    </button>
+                                    <ul class="dropdown-menu bg-petcards" aria-labelledby="Gender Type" id="gender-type">
+                                        <li><a class="dropdown-item" href="#" data-gender="Female">Female</a></li>
+                                        <li><a class="dropdown-item" href="#" data-gender="Male">Male</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dropdown-container">
+                                <div class="dropdown me-1 ms-1">
+                                    <button class="btn btn-default dropdown-toggle light-purple-button" id="filterDropdown3"
+                                            type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        Age
+                                    </button>
+                                    <ul class="dropdown-menu bg-petcards" aria-labelledby="Age Type" id="age-type">
+                                        <li><a class="dropdown-item" href="#" data-age="Baby">Baby</a></li>
+                                        <li><a class="dropdown-item" href="#" data-age="Young">Young</a></li>
+                                        <li><a class="dropdown-item" href="#" data-age="Adult">Adult</a></li>
+                                        <li><a class="dropdown-item" href="#" data-age="Senior">Senior</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mt-3 d-flex justify-content-center">
+                            <input type="text" id="search-bar" placeholder="Enter location (e.g., zipcode...)" class="form-control flex-grow-1 small-input" required>
+                            <button type="submit" class="btn btn-default light-purple-button">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-    <div class="container centering-container">
-        <div class="row">
-            <div class="col-sm-12">
-                <form id="petSearch" class="mx-auto mt-3">
-                    <h3 class="centering-text">Filter your search.</h3>
-                    <div class="d-sm-flex justify-content-center mt-1">
-                        <div class="dropdown-container">
-                            <div class="dropdown me-1 ms-1">
-                                <button class="btn btn-default dropdown-toggle light-purple-button" type="button"
-                                        id="filterDropdown1"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                    Animal Type
-                                </button>
-                                <ul class="dropdown-menu bg-petcards" aria-labelledby="Animal Type" id="type">
-                                    <li><a class="dropdown-item" href="#" data-type="Dog">Dog</a></li>
-                                    <li><a class="dropdown-item" href="#" data-type="Cat">Cat</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="dropdown-container ">
-                            <div class="dropdown me-1 ms-1">
-                                <button class="btn btn-default dropdown-toggle light-purple-button" type="button"
-                                        id="filterDropdown2"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                    Gender
-                                </button>
-                                <ul class="dropdown-menu bg-petcards" aria-labelledby="Gender Type" id="gender-type">
-                                    <li><a class="dropdown-item" href="#" data-gender="Female">Female</a></li>
-                                    <li><a class="dropdown-item" href="#" data-gender="Male">Male</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="dropdown-container">
-                            <div class="dropdown me-1 ms-1">
-                                <button class="btn btn-default dropdown-toggle light-purple-button" id="filterDropdown3"
-                                        type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                    Age
-                                </button>
-                                <ul class="dropdown-menu bg-petcards" aria-labelledby="Age Type" id="age-type">
-                                    <li><a class="dropdown-item" href="#" data-age="Baby">Baby</a></li>
-                                    <li><a class="dropdown-item" href="#" data-age="Young">Young</a></li>
-                                    <li><a class="dropdown-item" href="#" data-age="Adult">Adult</a></li>
-                                    <li><a class="dropdown-item" href="#" data-age="Senior">Senior</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
+        <div id="animalContainer" class="row mx-auto mx-5"></div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header single-card-header">
+                        <h5 class="modal-title" id="modalTitle"></h5>
+                        <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="input-group mt-3 d-flex justify-content-center">
-                        <input type="text" id="search-bar" placeholder="Enter location (e.g., zipcode...)" class="form-control flex-grow-1 small-input" required>
-                        <button type="submit" class="btn btn-default light-purple-button">Search</button>
+                    <div class="modal-body bg-petcards">
+                        <img id="modalImage" class="img-fluid" alt="Animal Image">
+                        <p id="modalDescription"></p>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
 
-
-    <div id="animalContainer" class="row mx-auto mx-5"></div>
-
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header single-card-header">
-                    <h5 class="modal-title" id="modalTitle"></h5>
-                    <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bg-petcards">
-                    <img id="modalImage" class="img-fluid" alt="Animal Image">
-                    <p id="modalDescription"></p>
-                </div>
+    <!--  carousel  -->
+    <div class="centering-text row bg-light-purple">
+        <div class="col-sm-12 col-md-6">
+            <div class="">
+                <p>Meet Local Pets</p>
+                <p>Get acquainted with lovebale adoptable pets in your surrounding area!</p>
             </div>
         </div>
-    </div>
-
-    <div class="centering-text">
-<!--        <div class="col-sm-12 col-md-6">-->
-<!--            <p>Meet Local Pets</p>-->
-<!--            <p>Check pets near the area!</p>-->
-<!--        </div>-->
-        <div class="">
-            <p>Meet Local Pets</p>
-            <p>Check pets near the area!</p>
-        </div>
-        <div id="carouselExampleCaptions" class="carousel slide carousel-size mx-auto">
+        <div id="carouselExample" class="carousel slide carousel-size mx-auto col-md-6 bg-greywhite">
+            <div class="carousel-inner">
             <!-- Carousel Items -->
-            <div id="animalCarousel" class="row mx-auto mx-5"></div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <div id="animalCarousel" class="row mx-auto mx-5"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
 
-
-        <footer class="footer mt-4 bg-purple mx-auto">
+    <footer class="footer mt-4 bg-purple mx-auto">
         <div class="container text-white text-center no-footer-margin">
             <p class="p-2">&copy; 2024 Pawesome Adoption. All Rights Reserved.</p>
         </div>

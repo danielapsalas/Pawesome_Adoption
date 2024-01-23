@@ -460,7 +460,7 @@ function showModal(animal) {
 
 //pet carousel
 function petCarousel(data) {
-    const carouselContainer = document.getElementById('animalCarousel');
+    const carouselContainer = document.querySelector('#animalCarousel');
     carouselContainer.innerHTML = '';
 
     if (!data || typeof data !== 'object' || Object.keys(data).length === 0) {
