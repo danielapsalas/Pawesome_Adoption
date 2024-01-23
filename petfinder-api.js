@@ -438,6 +438,24 @@ function showModal(animal) {
 
 }
 
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(
+//             position => {
+//                 const { latitude, longitude } = position.coords;
+//                 console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+//                 eventsByLocation(latitude, longitude);
+//             },
+//             error => console.error("Error getting location:", error.message)
+//         );
+//     } else {
+//         alert("Geolocation is not supported. Please enable it to view pets near you.");
+//         fetchEventsWithoutLocation();
+//     }
+// }
+//
+// getLocation();
+
 //pet carousel
 function petCarousel(data) {
     const carouselContainer = document.getElementById('animalCarousel');
@@ -463,7 +481,7 @@ function petCarousel(data) {
         const carouselItem = document.createElement('div');
         carouselItem.classList.add('carousel-item');
 
-        // Add the 'active' class to the first carousel item
+        // add the 'active' class to the first carousel item
         if (index === 0) {
             carouselItem.classList.add('active');
         }
