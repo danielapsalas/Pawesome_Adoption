@@ -86,7 +86,7 @@ function petsByLocation(postalCode, petType, genderType, ageType) {
 
                     //call the cards to display them
                     petCards(data);
-
+                    petCarousel(data)
                     //call the pageNums function to display page numbers
                     // pageNums(apiUrl, data);
 
@@ -322,7 +322,6 @@ function showModal(animal) {
     modalDescription.textContent = '';
     //make modal content
     const title = document.createElement('h5');
-
     title.classList.add('card-title', 'font-roboto');
     title.textContent = animal.name ? animal.name : 'Unknown'
 
@@ -330,7 +329,6 @@ function showModal(animal) {
     ul.classList.add('list-group', 'list-group-flush', 'font-roboto');
 
     const id = document.createElement('li');
-
     id.classList.add('list-group-item', 'mt-4');
     id.textContent = `Id: ${animal.id !== null ? animal.id : 'Unknown'}`;
 
@@ -388,6 +386,7 @@ function showModal(animal) {
 
     const url = document.createElement('li');
     url.classList.add('list-group-item', 'font-roboto');
+
     const anchor = document.createElement('a');
     anchor.href = animal.url;
     anchor.textContent = 'More Information';
@@ -438,28 +437,68 @@ function showModal(animal) {
     });
 
 }
-    //function for pageNums
-    // function pageNums(apiUrl, data) {
-    //     let paginationElement = document.getElementById('pagination');
-    //
-    //     paginationElement.innerHTML = '';
-    //
-    //     // get the current page and the # for the rest of the pages
-    //     const currentPage = data.pagination.current_page;
-    //     const totalPages = data.pagination.total_pages;
-    //
-    //     // create new anchor tags with a for loop
-    //     for (let i = 1; i <= totalPages; i++) {
-    //         let anchorElement = document.createElement('a'); //create anchor
-    //         anchorElement.href = `${apiUrl}&page=${i}`; // set the page #
-    //         anchorElement.textContent = i; // html text
-    //         console
-    //
-    //         if (i === currentPage) {
-    //             anchorElement.classList.add('active'); // highlight what page user is on
-    //         }
-    //
-    //         paginationElement.appendChild(anchorElement); // append the anchor tag to the page element
-    //     }
-    // }
+
+//pet carousel
+function petCarousel(data) {
+    const carouselContainer = document.getElementById('animalCarousel');
+    carouselContainer.innerHTML = '';
+
+    if (!data || typeof data !== 'object' || Object.keys(data).length === 0) {
+        const noResults = document.createElement('p');
+        noResults.textContent = 'No animals found.';
+        carouselContainer.appendChild(noResults);
+        return;
+    }
+
+    const animals = data.animals;
+
+    if (!Array.isArray(animals) || animals.length === 0) {
+        const noResults = document.createElement('p');
+        noResults.textContent = 'No animals found.';
+        carouselContainer.appendChild(noResults);
+        return;
+    }
+
+    animals.forEach((animal, index) => {
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('carousel-item');
+
+        // Add the 'active' class to the first carousel item
+        if (index === 0) {
+            carouselItem.classList.add('active');
+        }
+
+        const imageCarousel = document.createElement('img');
+        imageCarousel.classList.add('d-block', 'w-100', 'object-fit-cover');
+        imageCarousel.src = animal.photos.length > 0 ? animal.photos[0].large : '/img/img_not_found_wide.png';
+        imageCarousel.alt = 'Animal Image';
+
+        const title = document.createElement('h4');
+        title.classList.add('pet-name');
+        title.textContent = animal.name ? animal.name : 'Unknown';
+
+        const gender = document.createElement('h5');
+        gender.classList.add('pet-gender');
+        gender.textContent = `Gender: ${animal.gender ? animal.gender : 'Unknown'}`;
+
+        const age = document.createElement('h6');
+        age.classList.add('pet-age');
+        age.textContent = `Age: ${animal.age ? animal.age : 'Unknown'}`;
+
+        const anchor = document.createElement('a');
+        anchor.href = animal.url;
+        anchor.textContent = 'More Information';
+
+        carouselItem.appendChild(imageCarousel);
+        carouselItem.appendChild(title);
+        carouselItem.appendChild(gender);
+        carouselItem.appendChild(age);
+        carouselItem.appendChild(anchor);
+
+        carouselContainer.appendChild(carouselItem);
+    });
+}
+
+
+
 

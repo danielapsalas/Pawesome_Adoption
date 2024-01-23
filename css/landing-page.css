@@ -119,6 +119,9 @@ footer{
    height: 50px;
 }
 
+.carousel-size{
+    width: 20rem;
+}
 
 @media (max-width: 768px) {
     .grid-container{
