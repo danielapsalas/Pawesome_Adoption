@@ -26,6 +26,8 @@ body{
     height: 80vh;
 }
 
+
+
 .item{
     width: 100%;
     height: auto;
@@ -121,8 +123,6 @@ footer{
 
 .carousel-size{
     border-radius: 1%;
-    padding: 1%;
-    margin: 2%;
     width: 30rem;
     height: auto;
 }
@@ -143,7 +143,7 @@ footer{
 
 .bg-greywhite-rounded{
     background-color: #F1F2F6;
-    border-radius: 5%;
+    border-radius: 20%;
 }
 
 .carousel-text-box{
@@ -154,14 +154,29 @@ footer{
     align-items: center;
 }
 
+.margin-padding-LP{
+    padding: 2%;
+    margin: 2%;
+}
+
+/*card sized for why adopt landing page*/
+.card-about-size{
+    max-width: 80%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
-    .grid-container{
-        height: 50vh;
-    }
+
 }
 
 @media (min-width: 768px) {
 
+}
+
+@media (min-width: 1027px) {
+    .card-about-size{
+        max-width: 25rem;
+    }
 }
 
 @media (min-width: 572px) and (max-width: 767px) {
