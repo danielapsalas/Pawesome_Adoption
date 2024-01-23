@@ -97,6 +97,8 @@ function petsByLocation(postalCode, petType, genderType, ageType) {
                     console.error(error)
                     console.log("1" + apiUrl)
                     window.location.href = 'error-page2.html';
+                    console.error(error)
+                    console.log("1" + apiUrl)
                 });
         })
         // .catch(error => {
@@ -488,6 +490,8 @@ function petCarousel(data) {
 
         const imageCarousel = document.createElement('img');
         imageCarousel.classList.add('d-block', 'w-100', 'object-fit-cover');
+        imageCarousel.style.width = '295px';
+        imageCarousel.style.height = '295px';
         imageCarousel.src = animal.photos.length > 0 ? animal.photos[0].large : '/img/img_not_found_wide.png';
         imageCarousel.alt = 'Animal Image';
 
