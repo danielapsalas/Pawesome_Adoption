@@ -42,6 +42,7 @@ function petsByLocation(postalCode, petType, genderType, ageType) {
     // show loading GIF
     const container = document.getElementById('animalContainer');
     const containerCarousel = document.querySelector('.carousel-info');
+    const spinnerCarousel = document.querySelector('.spinner-border');
 
     containerCarousel.classList.add('d-none')
     // container.innerHTML = '<img src="/gifs/spinner-2.gif" alt="Loading" class="loading-gif">';
@@ -83,6 +84,7 @@ function petsByLocation(postalCode, petType, genderType, ageType) {
                 .then(data => {
                     // remove loading GIF
                     container.innerHTML = '';
+                    spinnerCarousel.classList.add('d-none')
                     containerCarousel.classList.remove('d-none')
 
                     //call the cards to display them
