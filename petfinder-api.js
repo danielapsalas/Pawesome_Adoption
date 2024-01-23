@@ -35,15 +35,15 @@ const secret = secretView
 
 petsByLocation(78245, "cat", "female", "adult");
 
+// After content is loaded
+
+
 function petsByLocation(postalCode, petType, genderType, ageType) {
     // show loading GIF
     const container = document.getElementById('animalContainer');
+    const containerCarousel = document.querySelector('.carousel-info');
 
-    container.innerHTML = '<div class="d-flex justify-content-center text-light">\n' +
-        '  <div class="spinner-border text-secondary mt-4" role="status">\n' +
-        '    <span class="visually-hidden">Loading...</span>\n' +
-        '  </div>\n' +
-        '</div>';
+    containerCarousel.classList.add('d-none')
     // container.innerHTML = '<img src="/gifs/spinner-2.gif" alt="Loading" class="loading-gif">';
     // convert to Token
     fetch(`https://api.petfinder.com/v2/oauth2/token`, {
@@ -83,6 +83,7 @@ function petsByLocation(postalCode, petType, genderType, ageType) {
                 .then(data => {
                     // remove loading GIF
                     container.innerHTML = '';
+                    containerCarousel.classList.remove('d-none')
 
                     //call the cards to display them
                     petCards(data);
@@ -520,6 +521,7 @@ function petCarousel(data) {
         carouselContainer.appendChild(carouselItem);
     });
 }
+
 
 
 
