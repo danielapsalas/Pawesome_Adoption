@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="../img/icons/white-logo.png" type="image/x-icon">
     <title>Home</title>
     <!--  Bootstrap  -->
@@ -44,13 +44,13 @@
 
     <!--FOR SMALL SCREENS-->
     <article class="intro row justify-content-center align-items-center">
-        <div class="col-md-4 centering-text m-5">
+        <div class="col-md-4 centering-text m-5 d-md-none">
             <h1>Welcome to PawesomeAdoptions</h1>
 <!--            <h2>Where your new furry friend awaits.</h2>-->
             <p>Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
             <button class="btn btn-default light-purple-button">Change a Life</button>
         </div>
-        <div class="grid-container">
+        <div class="grid-container  d-md-none">
             <div class="item item-1 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-laying.jpg" alt="A cat laying down and looking up"></div>
             <div class="item item-2 grid-img"><img class="grid-img" src="../img/grid-imgs/terriers.jpg" alt="A terrier dog looking at the camera"></div>
             <div class="item item-3 grid-img"><img class="grid-img" src="../img/grid-imgs/pug.jpg" alt="A pug smiling and looking up at a camera"></div>
@@ -58,23 +58,22 @@
         </div>
     </article>
 
-<!--    &lt;!&ndash;FOR LARGE SCREENS&ndash;&gt;-->
-<!--    <article class="intro row justify-content-center align-items-center d-none d-sm-block hide-md-screen">-->
-<!--        <div class="grid-container">-->
-<!--            <div class="item item-1 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-laying.jpg" alt="A cat laying down and looking up"></div>-->
-<!--            <div class="item item-2 grid-img"><img class="grid-img" src="../img/grid-imgs/terriers.jpg" alt="A terrier dog looking at the camera"></div>-->
-<!--            <div class="item item-3 grid-img"><img class="grid-img" src="../img/grid-imgs/pug.jpg" alt="A pug smiling and looking up at a camera"></div>-->
-<!--            <div class="item item-4 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-staring.jpg" alt="A cat looking at a camera"></div>-->
-<!--            <div class="grid-content item-5 centering-container">-->
-<!--                <div class="grid-text-overlap centering-text m-5">-->
-<!--                    <h1 class="m-2">Welcome to PawesomeAdoptions</h1>-->
-<!--&lt;!&ndash;                    <h2 class="m-1">Where your new furry friend awaits.</h2>&ndash;&gt;-->
-<!--                    <p class="m-2">Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>-->
-<!--                    <button class="btn btn-default light-purple-button m-3">Change a Life</button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </article>-->
+    <article class="intro row justify-content-center align-items-center d-none d-sm-block hide-md-screen">
+        <div class="grid-container">
+            <div class="item item-1 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-laying.jpg" alt="A cat laying down and looking up"></div>
+            <div class="item item-2 grid-img"><img class="grid-img" src="../img/grid-imgs/terriers.jpg" alt="A terrier dog looking at the camera"></div>
+            <div class="item item-3 grid-img"><img class="grid-img" src="../img/grid-imgs/pug.jpg" alt="A pug smiling and looking up at a camera"></div>
+            <div class="item item-4 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-staring.jpg" alt="A cat looking at a camera"></div>
+            <div class="grid-content item-5 centering-container">
+                <div class="grid-text-overlap centering-text m-5">
+                    <h1 class="m-2">Welcome to PawesomeAdoptions</h1>
+                    <!--                    <h2 class="m-1">Where your new furry friend awaits.</h2>-->
+                    <p class="m-2">Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
+                    <button class="btn btn-default light-purple-button m-3">Change a Life</button>
+                </div>
+            </div>
+        </div>
+    </article>
 
     <div class="d-none">
         <div class="container centering-container">
@@ -152,38 +151,13 @@
             </div>
         </div>
     </div>
-    <!--  spinner for carousel  -->
-    <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-    </div>
-    <!--  carousel  -->
-<!--    <div class="vh-70 pb-1">-->
-<!--        <div class="row carousel-info margin-padding-LP">-->
-<!--            <div class="col-sm-12 col-md-6  mt-4">-->
-<!--                <div class="margin-padding-LP centering-text">-->
-<!--                    <h2 class="sm-my-5 mb-4">Meet Local Pets</h2>-->
-
-<!--                    <p class="mb-3">Browse through our diverse selection, and let the journey to finding your new best friend begin. Open your heart and home to a loving pet today!</p>-->
-
-<!--                    <button class="btn btn-default light-purple-button m-3">Change a Life</button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div id="carouselExample" class="margin-padding-LP carousel slide carousel-size mx-auto col-md-6 bg-greywhite">-->
-<!--                <div class="carousel-inner">-->
-<!--                    <div id="animalCarousel" class="owl-carousel row mx-auto mx-5"></div>-->
-<!--                </div>-->
-<!--                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">-->
-<!--                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                    <span class="visually-hidden">Previous</span>-->
-<!--                </button>-->
-<!--                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">-->
-<!--                    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                    <span class="visually-hidden">Next</span>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--        </div>-->
 
     <section class="">
+        <!--  spinner for carousel  -->
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <!--    Carousel    -->
         <div class="m-1 justify-content-center carousel-info">
             <div class="why-adopt-items-container justify-content-center">
                 <div class="mt-4 carousel-text margin-padding-LP">
@@ -191,6 +165,8 @@
                         <h2 class="sm-my-5 mb-4">Meet Local Pets</h2>
 
                         <p class="mb-3">Browse through our diverse selection, and let the journey to finding your new best friend begin. Open your heart and home to a loving pet today!</p>
+
+                        <p class="d-sm-none mb-3">Open your heart and home to the joyous experience of adopting a loving pet today. Embrace the warmth of unconditional love and the promise of a forever bond. Your decision to welcome a furry friend not only changes their life but transforms yours into a haven of shared moments, laughter, and endless companionship.</p>
 
                         <button class="btn btn-default light-purple-button m-3">Change a Life</button>
                     </div>
@@ -210,62 +186,58 @@
                 </div>
             </div>
         </div>
+
+        <!--    WHY ADOPT    -->
+        <div class="centering-text">
+            <h2 class="mt-5 mb-4">Why adopt?</h2>
+        </div>
+        <div class="why-adopt-items-container justify-content-center">
+            <div class="why-adopt-items why-adopt-1">
+                <div class="card-about-size card-bg-pale d-flex flex-column align-items-center justify-content-center">
+                    <img src="../img/icons/animal-shelter.png" class="card-img-top card-icon-size" alt="Animal shelter icon">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-2">Save a Life</h4>
+                        <p class="card-text mb-2">Adopting a pet from a shelter gives a homeless animal a chance for a new life and a loving home.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="why-adopt-items why-adopt-2">
+                <div class="card-about-size card-bg-pale d-flex flex-column align-items-center justify-content-center">
+                    <img src="../img/icons/pet-in-box.png" class="card-img-top card-icon-size" alt="A dog icon in a cardboard box">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-2">Reduce Overpopulation</h4>
+                        <p class="card-text mb-2">Choosing adoption helps combat pet overpopulation by providing a responsible alternative to breeding.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="why-adopt-items why-adopt-3">
+                <div class="card-about-size card-bg-pale d-flex flex-column align-items-center justify-content-center">
+                    <img src="../img/icons/pet-care%20(1).png" class="card-img-top card-icon-size" alt="A girl hugging her pet icon">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-2">Unconditional Love</h4>
+                        <p class="card-text mb-5">Adopted pets often show immense gratitude and loyalty, forming strong bonds with their adoptive families.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
         <!--WHY ADOPT-->
 
 
 
     <!--Adoption stories-->
-    <section class="">
+    <section class="bg-light-purple">
         <div class="m-1 justify-content-center">
-            <div class="centering-text">
-                <h2 class="">Discover Heartwarming Adoption Journeys</h2>
-                <h3>Hear from Those Who Took the Leap</h3>
-                <button class="btn btn-default light-purple-button m-3">Stories</button>
-            </div>
             <div class="why-adopt-items-container justify-content-center">
                 <img src="../img/adoption-stories/jessica-white.jpg" alt="Women with a dog." class="adoption-img my-4">
                 <article class="adoption-story my-4 mx-4">
+                    <h2 class="">Discover Heartwarming Adoption Journeys</h2>
+                    <h3>Hear from Those Who Took the Leap</h3>
                     <h4>Jessica White</h4>
                     <p>Jessica decided to adopt a rescue dog named Max, a lovable mixed breed with a heartwarming story. Max, initially timid and scared, blossomed into a loyal and spirited companion. Their journey together showcases the transformative power of adoption, proving that every dog deserves a chance to be part of a loving family.</p>
+                    <button class="btn btn-default light-purple-button sm-m-y">More Stories</button>
                 </article>
             </div>
-        </div>
-
-        <div class="centering-container vh-50 centering-text why-adopt-items-container">
-            <div class="centering-text">
-                <h2 class="mt-5 mb-4">Why adopt?</h2>
-            </div>
-            <div class="">
-                <div class="why-adopt-items why-adopt-1">
-                    <div class="card-about-size card-bg-pale hy-adopt-items-container justify-content-center">
-                        <img src="../img/icons/animal-shelter.png" class="card-img-top card-icon-size" alt="Animal shelter icon">
-                        <div class="card-body">
-                            <h4 class="card-title mb-2">Save a Life</h4>
-                            <p class="card-text mb-2">Adopting a pet from a shelter gives a homeless animal a chance for a new life and a loving home.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="why-adopt-items why-adopt-2">
-                    <div class="card-about-size card-bg-pale">
-                        <img src="../img/icons/pet-in-box.png" class="card-img-top card-icon-size" alt="A dog icon in a cardboard box">
-                        <div class="card-body">
-                            <h4 class="card-title mb-2">Reduce Overpopulation</h4>
-                            <p class="card-text mb-2">Choosing adoption helps combat pet overpopulation by providing a responsible alternative to breeding.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="why-adopt-items why-adopt-3">
-                    <div class="card-about-size card-bg-pale">
-                        <img src="../img/icons/pet-care%20(1).png" class="card-img-top card-icon-size" alt="A girl hugging her pet icon">
-                        <div class="card-body">
-                            <h4 class="card-title mb-2">Unconditional Love</h4>
-                            <p class="card-text mb-5">Adopted pets often show immense gratitude and loyalty, forming strong bonds with their adoptive families.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 

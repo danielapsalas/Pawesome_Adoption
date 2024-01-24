@@ -193,7 +193,6 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;  /* Center the items horizontally */
-    align-items: center;
 }
 
 .adoption-story, .adoption-img {
@@ -227,9 +226,14 @@ footer{
         max-width: 50%;
     }
 
-    .carousel-text, .carousel-img{
+    .carousel-text{
         flex: 1;
-        max-width: 50%;
+        max-width: 40%;
+    }
+
+    .carousel-img{
+        flex: 1;
+        max-width: 60%;
     }
 
 }
@@ -253,13 +257,17 @@ footer{
 
     .carousel-img{
         flex: 1;
-        max-width: 25%;
+        max-width: 30%;
     }
 
     .carousel-text{
         flex: 1;
         max-width: 40%;
 
+    }
+
+    .grid-container{
+        height: 70vh;
     }
 }
 
