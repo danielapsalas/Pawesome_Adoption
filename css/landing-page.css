@@ -180,6 +180,11 @@ footer{
     /*border: 2px solid #cdc2da !important;*/
 }
 
+.card-icon-size{
+    width: 28%;
+    margin: 5%;
+}
+
 @media (max-width: 576px) {
 
 }
