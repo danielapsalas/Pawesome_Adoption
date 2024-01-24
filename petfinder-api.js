@@ -492,7 +492,7 @@ function petCarousel(data) {
         }
 
         const imageCarousel = document.createElement('img');
-        imageCarousel.classList.add('d-block', 'w-100', 'object-fit-cover');
+        imageCarousel.classList.add('d-block', 'w-100', 'img-fluid');
         imageCarousel.style.width = '295px';
         imageCarousel.style.height = '295px';
         imageCarousel.src = animal.photos.length > 0 ? animal.photos[0].large : '/img/img_not_found_wide.png';

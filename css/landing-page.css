@@ -96,7 +96,7 @@ body{
 }
 
 .light-purple-button{
-    background-color: #9683EC;
+    background-color: #151415;
     color: #FFFFFF;
 }
 
@@ -123,7 +123,7 @@ footer{
 
 .carousel-size{
     border-radius: 1%;
-    width: 30rem;
+    width: 18rem;
     height: auto;
 }
 
@@ -167,12 +167,11 @@ footer{
     height: auto;
 }
 
-.vh-70 {
+.centered-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
 }
 
 .card-bg-pale{
@@ -185,19 +184,65 @@ footer{
     margin: 5%;
 }
 
-@media (max-width: 576px) {
+.adoption-story-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.adoption-story {
+    width: 100%;
+}
+
+.adoption-img {
+    width: 100%;
+}
+
+.why-adopt-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center the items horizontally */
+}
+
+.why-adopt-1, .why-adopt-2, .why-adopt-3{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .adoption-img {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .adoption-story{
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .why-adopt-1, .why-adopt-2, .why-adopt-3 {
+        flex: 1;
+        max-width: 50%;
+    }
 
 }
 
-@media (min-width: 577px) and (max-width: 1024px) {
 
-}
+@media (min-width: 992px) {
+    .adoption-img {
+        flex: 1;
+        max-width: 40%;
+    }
 
-@media (min-width: 1025px) {
-    .card-about-size{
-        max-width: 25rem;
+    .adoption-story{
+        flex: 1;
+        max-width: 25%;
+    }
+
+    .why-adopt-1, .why-adopt-2, .why-adopt-3 {
+        flex: 1;
+        max-width: 25%;
     }
 }
+
 
 @media (min-width: 572px) and (max-width: 767px) {
     /*hiding the mobile version of the hero*/
