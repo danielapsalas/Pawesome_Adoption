@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="../img/icons/white-logo.png" type="image/x-icon">
+  <title>Adopt a Pet</title>
+  <!--  Bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--  CSS  -->
+  <link href="../css/landing-page.css" rel="stylesheet">
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-purple">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../img/icons/white-logo.png" alt="Logo" width="120" height="72" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-light" aria-current="page" href="#">Why adopt?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-light" aria-current="page" href="#">Adoption Stories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-light" aria-current="page" href="#">Adopt a pet</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--FOR SMALL SCREENS-->
+<article class="intro row justify-content-center align-items-center">
+  <div class="col-md-4 centering-text m-5 d-md-none">
+    <h1>Welcome to PawesomeAdoptions</h1>
+    <!--            <h2>Where your new furry friend awaits.</h2>-->
+    <p>Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
+    <button class="btn btn-default light-purple-button">Change a Life</button>
+  </div>
+  <div class="grid-container  d-md-none">
+    <div class="item item-1 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-laying.jpg" alt="A cat laying down and looking up"></div>
+    <div class="item item-2 grid-img"><img class="grid-img" src="../img/grid-imgs/terriers.jpg" alt="A terrier dog looking at the camera"></div>
+    <div class="item item-3 grid-img"><img class="grid-img" src="../img/grid-imgs/pug.jpg" alt="A pug smiling and looking up at a camera"></div>
+    <div class="item item-4 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-staring.jpg" alt="A cat looking at a camera"></div>
+  </div>
+</article>
+
+<article class="intro row justify-content-center align-items-center d-none d-sm-block hide-md-screen">
+  <div class="grid-container">
+    <div class="item item-1 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-laying.jpg" alt="A cat laying down and looking up"></div>
+    <div class="item item-2 grid-img"><img class="grid-img" src="../img/grid-imgs/terriers.jpg" alt="A terrier dog looking at the camera"></div>
+    <div class="item item-3 grid-img"><img class="grid-img" src="../img/grid-imgs/pug.jpg" alt="A pug smiling and looking up at a camera"></div>
+    <div class="item item-4 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-staring.jpg" alt="A cat looking at a camera"></div>
+    <div class="grid-content item-5 centering-container">
+      <div class="grid-text-overlap centering-text m-5">
+        <h1 class="m-2">Welcome to PawesomeAdoptions</h1>
+        <!--                    <h2 class="m-1">Where your new furry friend awaits.</h2>-->
+        <p class="m-2">Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
+        <button class="btn btn-default light-purple-button m-3">Change a Life</button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="">
+  <div class="container centering-container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form id="petSearch" class="mx-auto mt-3">
+          <h3 class="centering-text">Filter your search.</h3>
+          <div class="d-sm-flex justify-content-center mt-1">
+            <div class="dropdown-container">
+              <div class="dropdown me-1 ms-1">
+                <button class="btn btn-default dropdown-toggle light-purple-button" type="button"
+                        id="filterDropdown1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                  Animal Type
+                </button>
+                <ul class="dropdown-menu bg-petcards" aria-labelledby="Animal Type" id="type">
+                  <li><a class="dropdown-item" href="#" data-type="Dog">Dog</a></li>
+                  <li><a class="dropdown-item" href="#" data-type="Cat">Cat</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown-container ">
+              <div class="dropdown me-1 ms-1">
+                <button class="btn btn-default dropdown-toggle light-purple-button" type="button"
+                        id="filterDropdown2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                  Gender
+                </button>
+                <ul class="dropdown-menu bg-petcards" aria-labelledby="Gender Type" id="gender-type">
+                  <li><a class="dropdown-item" href="#" data-gender="Female">Female</a></li>
+                  <li><a class="dropdown-item" href="#" data-gender="Male">Male</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown-container">
+              <div class="dropdown me-1 ms-1">
+                <button class="btn btn-default dropdown-toggle light-purple-button" id="filterDropdown3"
+                        type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                  Age
+                </button>
+                <ul class="dropdown-menu bg-petcards" aria-labelledby="Age Type" id="age-type">
+                  <li><a class="dropdown-item" href="#" data-age="Baby">Baby</a></li>
+                  <li><a class="dropdown-item" href="#" data-age="Young">Young</a></li>
+                  <li><a class="dropdown-item" href="#" data-age="Adult">Adult</a></li>
+                  <li><a class="dropdown-item" href="#" data-age="Senior">Senior</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mt-3 d-flex justify-content-center">
+            <input type="text" id="search-bar" placeholder="Enter location (e.g., zipcode...)" class="form-control flex-grow-1 small-input" required>
+            <button type="submit" class="btn btn-default light-purple-button">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="animalContainer" class="row mx-auto mx-5"></div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header single-card-header">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-petcards">
+          <img id="modalImage" class="img-fluid" alt="Animal Image">
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer mt-4 bg-purple mx-auto">
+  <div class="container text-white text-center no-footer-margin">
+    <p class="p-2">&copy; 2024 Pawesome Adoption. All Rights Reserved.</p>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="../api-keys.js"></script>
+<script src="../pet-search.js"></script>
+</body>
+</html>
