@@ -287,6 +287,24 @@ p {
     font-family: "Lato", sans-serif;
 }
 
+/*WHY ADOPT HTML*/
+.border-bottom-why-adopt {
+    border-bottom: #5D16A6 10px solid; /* Adjust the thickness as needed */
+    margin: 1.4rem 0;
+    display: inline-block;
+}
+
+
+.time-margin{
+    margin: 0 0 5% 0;
+}
+
+.why-adopt-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 @media (max-width: 320px) {
     .carousel-img{
         margin: 0 4%;
