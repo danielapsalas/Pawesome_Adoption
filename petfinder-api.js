@@ -499,18 +499,19 @@ function petCarousel(data) {
         imageCarousel.alt = 'Animal Image';
 
         const title = document.createElement('h4');
-        title.classList.add('pet-name');
+        title.classList.add('pet-name', 'lato-font');
         title.textContent = animal.name ? animal.name : 'Unknown';
 
         const gender = document.createElement('h5');
-        gender.classList.add('pet-gender');
+        gender.classList.add('pet-gender', 'karla-font');
         gender.textContent = `Gender: ${animal.gender ? animal.gender : 'Unknown'}`;
 
         const age = document.createElement('h6');
-        age.classList.add('pet-age');
+        age.classList.add('pet-age', 'karla-font');
         age.textContent = `Age: ${animal.age ? animal.age : 'Unknown'}`;
 
         const anchor = document.createElement('a');
+        anchor.classList.add('karla-font');
         anchor.href = animal.url;
         anchor.textContent = 'More Information';
 

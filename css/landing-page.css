@@ -98,6 +98,7 @@ body{
 .light-purple-button{
     background-color: #151415;
     color: #FFFFFF;
+    font-family: "Lato", sans-serif;
 }
 
 .row {
@@ -163,8 +164,9 @@ footer{
 
 /*card sized for why adopt landing page*/
 .card-about-size{
-    max-width: 80%;
     height: auto;
+    padding: 1%;
+    margin: 1%;
 }
 
 .centered-container {
@@ -215,6 +217,76 @@ footer{
     width: 100%;
 }
 
+
+/*TEXT FONTS*/
+h1{
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.875rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.grid-title{
+    font-size: 2rem;
+}
+
+.lato-font {
+    font-family: "Lato", sans-serif;
+}
+
+.karla-font {
+    font-family: "karla", sans-serif;
+}
+
+.line-height-normal {
+    line-height: 1.6;
+}
+
+.h2-line-height {
+    line-height: 1.5;
+}
+
+.h3-line-height {
+    line-height: 1.4;
+}
+
+.h4-line-height {
+    line-height: 1.3;
+}
+
+.h5-line-height {
+    line-height: 1.2;
+}
+
+.h6-line-height {
+    line-height: 1.1;
+}
+
+.navbar-font {
+    font-family: "Lato", sans-serif;
+}
+
 @media (max-width: 320px) {
     .carousel-img{
         margin: 0 4%;
@@ -251,6 +323,14 @@ footer{
 
     .adoption-story {
         margin: 2% 0!important;
+    }
+
+    .grid-title{
+        font-size: 2rem;
+    }
+
+    .grid-text{
+        font-size: 1.15rem;
     }
 }
 

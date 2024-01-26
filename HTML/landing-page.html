@@ -9,8 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!--  CSS  -->
     <link href="../css/landing-page.css" rel="stylesheet">
+    <!-- Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-purple">
         <div class="container-fluid">
@@ -20,7 +25,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse navbar-font" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
@@ -40,14 +45,11 @@
     </nav>
 
 
-
-
     <!--FOR SMALL SCREENS-->
     <article class="intro row justify-content-center align-items-center">
         <div class="col-md-4 centering-text m-5 d-md-none">
-            <h1>Welcome to Pawesome Adoptions</h1>
-<!--            <h2>Where your new furry friend awaits.</h2>-->
-            <p>Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
+            <h1 class="lato-font">Welcome to Pawesome Adoptions</h1>
+            <p class="karla-font">Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
             <button class="btn btn-default light-purple-button">Change a Life</button>
         </div>
         <div class="grid-container  d-md-none">
@@ -66,15 +68,17 @@
             <div class="item item-4 grid-img"><img class="grid-img" src="../img/grid-imgs/cat-staring.jpg" alt="A cat looking at a camera"></div>
             <div class="grid-content item-5 centering-container">
                 <div class="grid-text-overlap centering-text m-5">
-                    <h1 class="m-2">Welcome to PawesomeAdoptions</h1>
+                    <h1 class="m-2 lato-font grid-title">Welcome to PawesomeAdoptions</h1>
                     <!--                    <h2 class="m-1">Where your new furry friend awaits.</h2>-->
-                    <p class="m-2">Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
+                    <p class="m-2 karla-font line-height-normal grid-text">Dedicated to connecting loving homes with lovable pets, PawesomeAdoptions is your go-to destination for finding the perfect companion.</p>
                     <a href="pet-adoption-2.html"><button class="btn btn-default light-purple-button m-3">Change a Life</button></a>
                 </div>
             </div>
         </div>
     </article>
 
+
+    <!--  search  -->
     <div class="d-none">
         <div class="container centering-container">
             <div class="row">
@@ -133,7 +137,6 @@
             </div>
         </div>
 
-
         <div id="animalContainer" class="row mx-auto mx-5"></div>
 
         <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -152,8 +155,8 @@
         </div>
     </div>
 
-    <section class="">
-        <!--  spinner for carousel  -->
+    <!--  spinner for carousel  -->
+    <section>
         <div class="d-flex justify-content-center align-items-center text-light">
             <div class="spinner-border text-secondary m-5" role="status">
                 <span class="visually-hidden">Loading...</span>
@@ -166,11 +169,11 @@
             <div class="why-adopt-items-container justify-content-center">
                 <div class="mt-4 carousel-text margin-padding-LP">
                     <div class="margin-padding-LP">
-                        <h2 class="sm-my-5 mb-4">Meet Local Pets</h2>
+                        <h2 class="sm-my-5 mb-4 lato-font">Meet Local Pets</h2>
 
-                        <p class="mb-3">Browse through our diverse selection, and let the journey to finding your new best friend begin. Open your heart and home to a loving pet today!</p>
+                        <p class="mb-3 karla-font">Browse through our diverse selection, and let the journey to finding your new best friend begin. Open your heart and home to a loving pet today!</p>
 
-                        <p class="d-none d-sm-block hide-md-screen mb-3">Open your heart and home to the joyous experience of adopting a loving pet today. Embrace the warmth of unconditional love and the promise of a forever bond. Your decision to welcome a furry friend not only changes their life but transforms yours into a haven of shared moments, laughter, and endless companionship.</p>
+                        <p class="d-none d-sm-block hide-md-screen mb-3 line-height-normal karla-font">Open your heart and home to the joyous experience of adopting a loving pet today. Embrace the warmth of unconditional love and the promise of a forever bond. Your decision to welcome a furry friend not only changes their life but transforms yours into a haven of shared moments, laughter, and endless companionship.</p>
 
                         <button class="btn btn-default light-purple-button md-m-3 my-3">Change a Life</button>
                     </div>
@@ -190,8 +193,8 @@
                 </div>
             </div>
         </div>
-
     </section>
+
 
     <!--Adoption stories-->
     <section class="bg-light-purple">
@@ -199,28 +202,28 @@
                 <div class="why-adopt-items-container">
                     <img src="../img/adoption-stories/jessica-white.jpg" alt="Women with a dog." class="adoption-img m-4">
                     <article class="adoption-story">
-                        <h2 class="">Discover Heartwarming Adoption Journeys</h2>
-                        <h3>Hear from Those Who Took the Leap</h3>
-                        <h4>Jessica White</h4>
-                        <p>Jessica decided to adopt a rescue dog named Max, a lovable mixed breed with a heartwarming story. Max, initially timid and scared, blossomed into a loyal and spirited companion. Their journey together showcases the transformative power of adoption, proving that every dog deserves a chance to be part of a loving family.</p>
+                        <h2 class="lato-font">Discover Heartwarming Adoption Journeys</h2>
+                        <h4 class="lato-font">Jessica White</h4>
+                        <p class="karla-font line-height-normal">Jessica decided to adopt a rescue dog named Max, a lovable mixed breed with a heartwarming story. Max, initially timid and scared, blossomed into a loyal and spirited companion. Their journey together showcases the transformative power of adoption, proving that every dog deserves a chance to be part of a loving family.</p>
                         <button class="btn btn-default light-purple-button ">More Stories</button>
                     </article>
                 </div>
             </div>
     </section>
 
+
     <!--    WHY ADOPT    -->
     <section class="vh-60">
         <div class="centering-text">
-            <h2 class="mt-5 mb-4">Why adopt?</h2>
+            <h2 class="mt-5 mb-4 lato-font">Why adopt?</h2>
         </div>
         <div class="why-adopt-items-container d-flex justify-content-center">
             <div class="why-adopt-items why-adopt-2">
                 <div class="card-about-size card-bg-pale d-flex flex-column align-items-center justify-content-center">
                     <img src="../img/icons/animal-shelter.png" class="card-img-top card-icon-size" alt="Animal shelter icon">
                     <div class="card-body text-center">
-                        <h4 class="card-title mb-2">Save a Life</h4>
-                        <p class="card-text mb-2">Adopting a pet from a shelter gives a homeless animal a chance for a new life and a loving home.</p>
+                        <h4 class="card-title mb-2 lato-font">Save a Life</h4>
+                        <p class="card-text mb-2 karla-font line-height-normal">Adopting a pet from a shelter gives a homeless animal a chance for a new life and a loving home.</p>
                     </div>
                 </div>
             </div>
@@ -228,8 +231,8 @@
                 <div class="card-about-size card-bg-pale d-flex flex-column align-items-center justify-content-center">
                     <img src="../img/icons/pet-in-box.png" class="card-img-top card-icon-size" alt="A dog icon in a cardboard box">
                     <div class="card-body text-center">
-                        <h4 class="card-title mb-2">Reduce Overpopulation</h4>
-                        <p class="card-text mb-2">Choosing adoption helps combat pet overpopulation by providing a responsible alternative to breeding.</p>
+                        <h4 class="card-title mb-2 lato-font">Reduce Overpopulation</h4>
+                        <p class="card-text mb-2 karla-font line-height-normal">Choosing adoption helps combat pet overpopulation by providing a responsible alternative to breeding.</p>
                     </div>
                 </div>
             </div>
@@ -237,8 +240,8 @@
                 <div class="card-about-size card-bg-pale d-flex flex-column align-items-center justify-content-center">
                     <img src="../img/icons/pet-care%20(1).png" class="card-img-top card-icon-size" alt="A girl hugging her pet icon">
                     <div class="card-body text-center">
-                        <h4 class="card-title mb-2">Unconditional Love</h4>
-                        <p class="card-text mb-5">Adopted pets often show immense gratitude and loyalty, forming strong bonds with their adoptive families.</p>
+                        <h4 class="card-title mb-2 lato-font">Unconditional Love</h4>
+                        <p class="card-text mb-5 karla-font line-height-normal">Adopted pets often show immense gratitude and loyalty, forming strong bonds with their adoptive families.</p>
                     </div>
                 </div>
             </div>
@@ -246,13 +249,13 @@
     </section>
 
 
+    <!--  Footer  -->
+    <footer class="footer mt-4 bg-purple mx-auto">
+        <div class="container text-white text-center no-footer-margin">
+            <p class="p-2">&copy; 2024 Pawesome Adoption. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-
-<!--    <footer class="footer mt-4 bg-purple mx-auto">-->
-<!--        <div class="container text-white text-center no-footer-margin">-->
-<!--            <p class="p-2">&copy; 2024 Pawesome Adoption. All Rights Reserved.</p>-->
-<!--        </div>-->
-<!--    </footer>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../api-keys.js"></script>
