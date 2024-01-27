@@ -195,6 +195,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;  /* Center the items horizontally */
+    margin: auto;
 }
 
 .adoption-story, .adoption-img {
@@ -302,14 +303,17 @@ p {
 .why-adopt-img{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
+
+
 @media (max-width: 320px) {
     .carousel-img{
         margin: 0 4%;
         padding: 0 2%;
     }
+
 
 }
 
@@ -350,6 +354,15 @@ p {
     .grid-text{
         font-size: 1.15rem;
     }
+
+    .why-adopt-img {
+        width: 60%;
+    }
+
+    .md-adopt-margin{
+        margin: 0 20%;
+    }
+
 }
 
 
