@@ -308,8 +308,24 @@ p {
 }
 
 /*ADOPTION STORIES HTML*/
+/*.rounded-circle-container {*/
+/*    width: 100%;*/
+/*    max-width: 200px;*/
+/*}*/
 
+/*.rounded-circle-style{*/
+/*    height: 300px;*/
+/*    object-fit: cover;*/
+/*}*/
+.max-height-img {
+    max-height: 100%;
+    width: auto;
+}
 
+.card-style-adopt{
+    border: 0;
+    background-color: rgba(196, 187, 204, 0.4);
+}
 
 @media (max-width: 320px) {
     .carousel-img{
@@ -366,6 +382,9 @@ p {
         margin: 0 20%;
     }
 
+    .card{
+        width: 100%;
+    }
 }
 
 
@@ -399,6 +418,10 @@ p {
         height: 70vh;
     }
 
+    /*.rounded-circle-style{*/
+    /*    height: 100%;*/
+    /*    object-fit: cover;*/
+    /*}*/
 
 }
 
