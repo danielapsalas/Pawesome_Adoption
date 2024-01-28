@@ -339,6 +339,9 @@ p {
     background-color: rgba(196, 187, 204, 0.4);
 }
 
+.list-group-item{
+    padding: .35rem 0;
+}
 @media (max-width: 320px) {
     .carousel-img{
         margin: 0 4%;
