@@ -39,11 +39,13 @@ function petsByLocation(postalCode, petType, genderType, ageType) {
     // show loading GIF
     const container = document.getElementById('animalContainer');
 
-    container.innerHTML = '<div class="d-flex justify-content-center align-items-center text-light">\n' +
-        '            <div class="spinner-border text-secondary m-5" role="status">\n' +
-        '                <span class="visually-hidden">Loading...</span>\n' +
-        '            </div>\n' +
-        '        </div>';
+    container.innerHTML = `<div class="container">
+    <div class="d-flex justify-content-center align-items-center text-light vh-80">
+        <div class="spinner-border text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>`
     // container.innerHTML = '<img src="/gifs/spinner-2.gif" alt="Loading" class="loading-gif">';
     // convert to Token
     fetch(`https://api.petfinder.com/v2/oauth2/token`, {
@@ -235,7 +237,7 @@ function petCards(data) {
     //make pet cards (for each) animal and append them to the container
     animals.forEach(animal => {
         const card = document.createElement('div');
-        card.classList.add('card', 'mx-auto', 'm-4', 'col-12', 'col-md-6', 'col-lg-6', 'col-xl-6', 'col-xxl-4', 'hvr-grow', 'bg-boxshadow', 'bg-petcards', 'font-roboto');
+        card.classList.add('card', 'mx-auto', 'col',  'mb-4', 'bg-boxshadow');
         card.style.width = '18rem';
         card.style.margin = '';
 
