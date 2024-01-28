@@ -366,7 +366,7 @@ p {
 }
 
 .bg-boxshadow{
-    box-shadow: 5px 5px 10px rgba(6, 2, 10, 0.72);
+    box-shadow: 5px 5px 10px rgba(6, 2, 10, 0.53);
 }
 
 @media (max-width: 320px) {
