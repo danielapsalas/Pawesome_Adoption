@@ -1,0 +1,2 @@
+const clientIDView = 'cv4SzQr2x8xsBqpbPbmZgiavXbH104L46BPVpoaGS6UW7YK0sb';
+const secretView = 'QO9QvTOXNgwEJyQHWArK1FG8Qe0IRFw03ZcBen3E';
