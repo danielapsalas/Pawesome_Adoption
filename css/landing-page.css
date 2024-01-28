@@ -302,6 +302,11 @@ p {
     display: inline-block;
 }
 
+.border-bottom-adoption-stories{
+    margin: 1.4rem 0;
+    border-bottom: #5D16A6 10px solid; /* Adjust the thickness as needed */
+    display: inline-block;
+}
 
 .time-margin{
     margin: 0 0 5% 0;

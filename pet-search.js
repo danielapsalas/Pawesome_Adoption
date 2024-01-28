@@ -234,51 +234,51 @@ function petCards(data) {
     animals.forEach(animal => {
         const card = document.createElement('div');
         card.classList.add('card', 'mx-auto', 'm-4', 'col-12', 'col-md-6', 'col-lg-6', 'col-xl-6', 'col-xxl-4', 'hvr-grow', 'bg-boxshadow', 'bg-petcards', 'font-roboto');
-        card.style.width = '20rem';
+        card.style.width = '18rem';
         card.style.margin = '';
 
         const image = document.createElement('img');
         image.classList.add('card-img-top', 'mt-3', 'd-flex', 'justify-content-center', 'align-items-center', 'mx-auto', 'object-fit-cover');
-        image.style.width = '295px';
-        image.style.height = '295px';
+        image.style.width = '250px';
+        image.style.height = '250px';
         image.src = animal.photos.length > 0 ? animal.photos[0].large : '/img/img_not_found_wide.png';
         image.alt = 'Animal Image';
 
         const cardBody = document.createElement('div');
-        cardBody.classList.add('card-body');
+        cardBody.classList.add('card-body', 'lato-font');
 
         const title = document.createElement('h5');
-        title.classList.add('card-title');
+        title.classList.add('card-title', 'karla-font');
         title.textContent = animal.name ? animal.name : 'Unknown';
 
         const description = document.createElement('p');
-        description.classList.add('card-text');
+        description.classList.add('card-text', 'karla-font');
 
         const ul = document.createElement('ul');
-        ul.classList.add('list-group', 'list-group-flush');
+        ul.classList.add('list-group', 'list-group-flush', 'karla-font');
 
         const id = document.createElement('li');
-        id.classList.add('list-group-item');
+        id.classList.add('list-group-item', 'karla-font');
         id.textContent = `Id: ${animal.id ? animal.id : 'Unknown'}`;
 
         const species = document.createElement('li');
-        species.classList.add('list-group-item');
+        species.classList.add('list-group-item', 'karla-font');
         species.textContent = `Species: ${animal.species ? animal.species : 'Unknown'}`;
 
         const breed = document.createElement('li');
-        breed.classList.add('list-group-item');
+        breed.classList.add('list-group-item', 'karla-font');
         breed.textContent = `Breed: ${animal.breeds.primary !== null ? animal.breeds.primary : 'Unknown'}`;
 
         const gender = document.createElement('li');
-        gender.classList.add('list-group-item');
+        gender.classList.add('list-group-item', 'karla-font');
         gender.textContent = `Gender: ${animal.gender ? animal.gender : 'Unknown'}`;
 
         const age = document.createElement('li');
-        age.classList.add('list-group-item');
+        age.classList.add('list-group-item', 'karla-font');
         age.textContent = `Age: ${animal.age ? animal.age : 'Unknown'}`;
 
         const size = document.createElement('li');
-        size.classList.add('list-group-item');
+        size.classList.add('list-group-item', 'karla-font');
         size.textContent = `Size: ${animal.size ? animal.size : 'Unknown'}`;
 
         ul.appendChild(id);
@@ -322,69 +322,74 @@ function showModal(animal) {
     modalDescription.textContent = '';
     //make modal content
     const title = document.createElement('h5');
+    title.classList.add('card-title', 'karla-font');
+    title.textContent = animal.name ? animal.name : 'Unknown';
 
-    title.classList.add('card-title', 'font-roboto');
-    title.textContent = animal.name ? animal.name : 'Unknown'
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body', 'karla-font');
+
+    const description = document.createElement('p');
+    description.classList.add('card-text', 'karla-font');
 
     const ul = document.createElement('ul');
-    ul.classList.add('list-group', 'list-group-flush', 'font-roboto');
+    ul.classList.add('list-group', 'list-group-flush', 'karla-font');
 
     const id = document.createElement('li');
-
-    id.classList.add('list-group-item', 'mt-4');
+    id.classList.add('list-group-item', 'mt-4', 'karla-font');
     id.textContent = `Id: ${animal.id !== null ? animal.id : 'Unknown'}`;
 
     const species = document.createElement('li');
-    species.classList.add('list-group-item');
+    species.classList.add('list-group-item', 'karla-font');
     species.textContent = `Species: ${animal.species !== null ? animal.species : 'Unknown'}`;
 
     const breed = document.createElement('li');
-    breed.classList.add('list-group-item');
+    breed.classList.add('list-group-item', 'karla-font');
     breed.textContent = `Breed: ${animal.breeds.primary !== null ? animal.breeds.primary : 'Unknown'}`;
 
     const gender = document.createElement('li');
-    gender.classList.add('list-group-item');
+    gender.classList.add('list-group-item', 'karla-font');
     gender.textContent = `Gender: ${animal.gender !== null ? animal.gender : 'Unknown'}`;
 
     const age = document.createElement('li');
-    age.classList.add('list-group-item');
+    age.classList.add('list-group-item', 'karla-font');
     age.textContent = `Age: ${animal.age !== null ? animal.age : 'Unknown'}`;
 
     const size = document.createElement('li');
-    size.classList.add('list-group-item');
+    size.classList.add('list-group-item', 'karla-font');
     size.textContent = `Size: ${animal.size !== null ? animal.size : 'Unknown'}`;
 
     const declawed = document.createElement('li');
-    declawed.classList.add('list-group-item');
+    declawed.classList.add('list-group-item', 'karla-font');
     declawed.textContent = `Declawed: ${animal.attributes.declawed ? 'Yes' : 'No'}`;
 
     const house_trained = document.createElement('li');
-    house_trained.classList.add('list-group-item');
+    house_trained.classList.add('list-group-item', 'karla-font');
     house_trained.textContent = `House Trained: ${animal.attributes.house_trained ? 'Yes' : 'No'}`;
 
     const shots_current = document.createElement('li');
-    shots_current.classList.add('list-group-item');
+    shots_current.classList.add('list-group-item', 'karla-font');
     shots_current.textContent = `Shots Current: ${animal.attributes.shots_current ? 'Yes' : 'No'}`;
 
     const spayed_neutered = document.createElement('li');
-    spayed_neutered.classList.add('list-group-item');
+    spayed_neutered.classList.add('list-group-item', 'karla-font');
     spayed_neutered.textContent = `Spayed/Neutered: ${animal.attributes.spayed_neutered ? 'Yes' : 'No'}`;
 
     const special_needs = document.createElement('li');
-    special_needs.classList.add('list-group-item');
+    special_needs.classList.add('list-group-item', 'karla-font');
     special_needs.textContent = `Special Needs: ${animal.attributes.special_needs ? 'Yes' : 'No'}`;
 
     const phone = document.createElement('li');
-    phone.classList.add('list-group-item');
+    phone.classList.add('list-group-item', 'karla-font');
     phone.textContent = `Phone number: ${animal.contact.phone !== null ? animal.contact.phone : 'Unknown'}`;
 
     const email = document.createElement('li');
-    email.classList.add('list-group-item');
+    email.classList.add('list-group-item', 'karla-font');
     email.textContent = `Email: ${animal.contact.email !== null ? animal.contact.email: 'Unknown'}`;
 
     const address = document.createElement('li');
-    address.classList.add('list-group-item', 'font-roboto');
+    address.classList.add('list-group-item', 'karla-font');
     address.textContent = `Address: ${animal.contact.address.address1} ${animal.contact.address.city}, ${animal.contact.address.state} ${animal.contact.address.postcode} ${animal.contact.address.country}`;
+
 
     const url = document.createElement('li');
     url.classList.add('list-group-item', 'font-roboto');
