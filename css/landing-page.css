@@ -342,6 +342,10 @@ p {
 .list-group-item{
     padding: .35rem 0;
 }
+
+.marg-drop {
+    margin-bottom: 1rem!important;
+}
 @media (max-width: 320px) {
     .carousel-img{
         margin: 0 4%;
