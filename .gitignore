@@ -1,4 +1,4 @@
 # Ignore files with API keys
 api-keys.js
-.env.env
+..env
 .env
