@@ -214,6 +214,7 @@ function petCards(data) {
 
     if (!data || typeof data !== 'object' || Object.keys(data).length === 0) {
         const noResults = document.createElement('p');
+        noResults.classList.add('mx-auto');
         noResults.textContent = 'No animals found.';
         container.appendChild(noResults);
         return;
@@ -225,6 +226,7 @@ function petCards(data) {
     // make sure its an array and the length
     if (!Array.isArray(animals) || animals.length === 0) {
         const noResults = document.createElement('p');
+        noResults.classList.add('mx-auto');
         noResults.textContent = 'No animals found.';
         container.appendChild(noResults);
         return;

@@ -103,7 +103,7 @@ body{
 }
 
 nav a{
-    font-size: 1.15rem!important;
+    font-size: 1.10rem!important;
 }
 
 .light-purple-button{
@@ -111,6 +111,11 @@ nav a{
     color: #FFFFFF;
     font-family: "Lato", sans-serif;
     text-decoration: none;
+}
+
+a {
+    color:black;
+    text-decoration: underline;
 }
 
 .row {
@@ -159,6 +164,9 @@ footer{
     border-radius: 20%;
 }
 
+.learn-more-purple{
+    color: #5D16A6;
+}
 
 .carousel-text-box{
     width: 90%;
@@ -355,6 +363,10 @@ p {
 
 .marg-drop{
     margin-bottom: 2%;
+}
+
+.bg-boxshadow{
+    box-shadow: 5px 5px 10px rgba(6, 2, 10, 0.72);
 }
 
 @media (max-width: 320px) {
