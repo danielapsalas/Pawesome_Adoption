@@ -98,7 +98,7 @@ function petsByLocation(postalCode, petType, genderType, ageType) {
                     // handle any errors that occurred during the request
                     console.error(error)
                     console.log("1" + apiUrl)
-                    window.location.href = 'error-page2.html';
+                    window.location.href = 'HTML/error-page2.html';
                     console.error(error)
                     console.log("1" + apiUrl)
                 });
