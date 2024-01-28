@@ -214,7 +214,7 @@ footer{
 .why-adopt-items-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;  /* Center the items horizontally */
+    justify-content: center;
     margin: auto;
 }
 
