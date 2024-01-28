@@ -245,7 +245,7 @@ function petCards(data) {
         image.classList.add('card-img-top', 'mt-3', 'd-flex', 'justify-content-center', 'align-items-center', 'mx-auto', 'object-fit-cover');
         image.style.width = '250px';
         image.style.height = '250px';
-        image.src = animal.photos.length > 0 ? animal.photos[0].large : '../img/icons/img_not_found_wide.png';
+        image.src = animal.photos.length > 0 ? animal.photos[0].large : 'img/icons/img_not_found_wide.png';
         image.alt = 'Animal Image';
 
         const cardBody = document.createElement('div');
