@@ -31,7 +31,7 @@ dropdownMenu3.addEventListener("click", function(event) {
 
 const clientId = clientIDView
 const secret = secretView
-
+console.log(clientId)
 petsByLocation(68023, "dog", "female", "adult");
 
 // After content is loaded
@@ -245,7 +245,7 @@ function petCards(data) {
         image.classList.add('card-img-top', 'mt-3', 'd-flex', 'justify-content-center', 'align-items-center', 'mx-auto', 'object-fit-cover');
         image.style.width = '295px';
         image.style.height = '295px';
-        image.src = animal.photos.length > 0 ? animal.photos[0].large : '/img/img_not_found.png';
+        image.src = animal.photos.length > 0 ? animal.photos[0].large : '/img/img_not_found_wide.png';
         image.alt = 'Animal Image';
 
         const cardBody = document.createElement('div');

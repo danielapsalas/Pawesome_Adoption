@@ -31,6 +31,7 @@ dropdownMenu3.addEventListener("click", function(event) {
 
 const clientId = clientIDView
 const secret = secretView
+console.log(clientId)
 
 petsByLocation(68023, "cat", "female", "adult");
 
