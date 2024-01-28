@@ -29,14 +29,8 @@ dropdownMenu3.addEventListener("click", function(event) {
 });
 
 
-// const clientId = clientIDView
-//
-// const secret = secretView
-
-require('dotenv').config();
-
-const clientId = process.env.CLIENT_ID;
-const secret = process.env.CLIENT_SECRET;
+const clientId = clientIDView
+const secret = secretView
 
 petsByLocation(68023, "dog", "female", "adult");
 
