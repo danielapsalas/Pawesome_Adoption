@@ -33,17 +33,17 @@ const clientId = clientIDView
 
 const secret = secretView
 
-petsByLocation(78245, "cat", "female", "adult");
+petsByLocation(68023, "cat", "female", "adult");
 
 function petsByLocation(postalCode, petType, genderType, ageType) {
     // show loading GIF
     const container = document.getElementById('animalContainer');
 
-    container.innerHTML = '<div class="d-flex justify-content-center text-light">\n' +
-        '  <div class="spinner-border text-secondary" role="status">\n' +
-        '    <span class="visually-hidden">Loading...</span>\n' +
-        '  </div>\n' +
-        '</div>';
+    container.innerHTML = '<div class="d-flex justify-content-center align-items-center text-light">\n' +
+        '            <div class="spinner-border text-secondary m-5" role="status">\n' +
+        '                <span class="visually-hidden">Loading...</span>\n' +
+        '            </div>\n' +
+        '        </div>';
     // container.innerHTML = '<img src="/gifs/spinner-2.gif" alt="Loading" class="loading-gif">';
     // convert to Token
     fetch(`https://api.petfinder.com/v2/oauth2/token`, {

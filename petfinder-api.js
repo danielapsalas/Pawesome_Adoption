@@ -33,7 +33,7 @@ const clientId = clientIDView
 
 const secret = secretView
 
-petsByLocation(78245, "cat", "female", "adult");
+petsByLocation(68023, "dog", "female", "adult");
 
 // After content is loaded
 
