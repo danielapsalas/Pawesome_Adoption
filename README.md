@@ -1,13 +1,13 @@
-#Pawesome Adoption
-This project is a web application aimed at helping users find information about animals in their area. It includes a front end portion of the website featuring a landing page, articles, and a dynamic search and filter feature. Users can easily search for animals in their locality using this application.
+# **Pawesome Adoption**
+This project is a web application aimed at helping users find information about animals in their area. It includes a front end portion of the website featuring a landing page, articles, and a dynamic search and filter feature. Users can easily search for animals in their area.
 
-#Technologies Used
+# **Technologies Used**
 HTML
 CSS
 JavaScript
 Bootstrap
 
-#Features
+# **Features**
 Front End: The project includes a visually appealing front end portion with a landing page that welcomes users to the platform.
 
 Articles: Users can access articles on why they should adopt and adoption storeis.
