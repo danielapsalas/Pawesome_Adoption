@@ -2,7 +2,7 @@
 This project is a web application aimed at helping users find information about animals in their area. It includes a front end portion of the website featuring a landing page, articles, and a dynamic search and filter feature. Users can easily search for animals in their area.
 
 # **Technologies Used**
-HTML
+- HTML
 - CSS
 - JavaScript
 - Bootstrap
