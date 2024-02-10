@@ -3,9 +3,9 @@ This project is a web application aimed at helping users find information about 
 
 # **Technologies Used**
 HTML
-CSS
-JavaScript
-Bootstrap
+- CSS
+- JavaScript
+- Bootstrap
 
 # **Features**
 Front End: The project includes a visually appealing front end portion with a landing page that welcomes users to the platform.
